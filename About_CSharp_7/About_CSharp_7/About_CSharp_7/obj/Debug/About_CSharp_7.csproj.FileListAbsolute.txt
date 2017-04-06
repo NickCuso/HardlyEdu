@@ -1,0 +1,7 @@
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\bin\Debug\About_CSharp_7.exe.config
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\bin\Debug\About_CSharp_7.exe
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\bin\Debug\About_CSharp_7.pdb
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\obj\Debug\About_CSharp_7.csprojResolveAssemblyReference.cache
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\obj\Debug\About_CSharp_7.exe
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\obj\Debug\About_CSharp_7.pdb
+C:\Code\Tutorials\About_CSharp_7\About_CSharp_7\About_CSharp_7\bin\Debug\System.ValueTuple.dll
