@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace HD
 {
@@ -48,6 +49,7 @@ namespace HD
       };
 
       Process gitProcess = Process.Start(startInfo);
+      Thread.Sleep(TimeSpan.FromSeconds(1));
     }
   }
 }
