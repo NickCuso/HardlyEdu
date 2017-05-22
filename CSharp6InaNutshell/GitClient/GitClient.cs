@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace HD
 {
@@ -45,9 +46,17 @@ namespace HD
         UseShellExecute = false
       };
 
-      Process gitProcess = Process.Start(startInfo);
-      string result = gitProcess.StandardOutput.ReadToEnd();
-      return result;
+
+      using(TextWriter writer = new StringWriter())
+      {
+        TextWriter oldOut = Console.Out;
+        Console.SetOut(writer);
+        Console.SetError(writer);
+        Process gitProcess = Process.Start(startInfo);
+        Console.SetOut(oldOut);
+        Console.SetError(oldOut);
+        return writer.ToString();
+      }
     }
   }
 }
