@@ -14,7 +14,9 @@ namespace HD
     {
       Console.WindowWidth = Console.LargestWindowWidth / 2;
       Console.WindowHeight = Console.LargestWindowHeight / 2;
-      Console.ForegroundColor = ConsoleColor.DarkBlue;
+
+      Console.ForegroundColor = ConsoleColor.Yellow;
+      Console.BackgroundColor = ConsoleColor.DarkGray;
 
       Console.WriteLine(Execute("add --all"));
       Console.WriteLine(Execute("commit -a -m \"Test\""));
