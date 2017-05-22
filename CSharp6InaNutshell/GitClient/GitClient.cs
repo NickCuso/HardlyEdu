@@ -12,6 +12,9 @@ namespace HD
   {
     public void Run()
     {
+      Console.WindowWidth = Console.LargestWindowWidth;
+      Console.WindowHeight = Console.LargestWindowHeight / 2;
+
       Console.WriteLine(Execute("add --all"));
       Console.WriteLine(Execute("commit -a -m \"Test\""));
       Console.WriteLine(Execute("push"));
