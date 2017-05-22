@@ -17,6 +17,7 @@ namespace HD
 
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.BackgroundColor = ConsoleColor.DarkGray;
+      Console.Beep();
 
       Console.WriteLine(Execute("add --all"));
       Console.WriteLine(Execute("commit -a -m \"Test\""));
