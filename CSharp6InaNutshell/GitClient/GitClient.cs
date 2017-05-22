@@ -27,7 +27,7 @@ namespace HD
       string stepDescription, 
       string gitCommand)
     {
-      Console.Write(stepDescription);
+      Console.Write(stepDescription.PadRight(20));
       string step1Result = Execute(gitCommand);
       Console.CursorLeft = 0;
 
