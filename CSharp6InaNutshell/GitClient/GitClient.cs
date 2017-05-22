@@ -17,14 +17,24 @@ namespace HD
 
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.BackgroundColor = ConsoleColor.DarkGray;
-      Console.Beep();
 
-      Console.WriteLine(Execute("add --all"));
-      Console.WriteLine(Execute("commit -a -m \"Test\""));
-      Console.WriteLine(Execute("push"));
+      ExecuteAndPrint("Step 1 of 3: Add untracked files", "add --all");
+      ExecuteAndPrint("Step 2 of 3: Commit all", "commit -a -m \"Test\"");
+      ExecuteAndPrint("Step 3 of 3: Push!", "push");
     }
 
-    private static string Execute(string command)
+    static void ExecuteAndPrint(
+      string stepDescription, 
+      string gitCommand)
+    {
+      Console.Write(stepDescription);
+      string step1Result = Execute(gitCommand);
+      Console.CursorLeft -= stepDescription.Length;
+      Console.WriteLine(step1Result);
+    }
+
+    static string Execute(
+      string command)
     {
       ProcessStartInfo startInfo = new ProcessStartInfo
       {
