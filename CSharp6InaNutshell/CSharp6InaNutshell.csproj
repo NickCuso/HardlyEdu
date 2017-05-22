@@ -55,6 +55,7 @@
     <Compile Include="DateTimeExamples.cs" />
     <Compile Include="DynamicBinding.cs" />
     <Compile Include="FormattingExamples.cs" />
+    <Compile Include="GitClient\GitClient.cs" />
     <Compile Include="HDFormatProvider.cs" />
     <Compile Include="MoreThanYouEverWantedToKnowAboutStrings.cs" />
     <Compile Include="PreprocessorDirectives.cs" />
@@ -69,8 +70,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GitClient\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
