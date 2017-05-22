@@ -29,7 +29,7 @@ namespace HD
     {
       Console.Write(stepDescription);
       string step1Result = Execute(gitCommand);
-      Console.CursorLeft -= stepDescription.Length;
+      Console.CursorLeft = 0;
 
       Console.WriteLine(step1Result);
     }
