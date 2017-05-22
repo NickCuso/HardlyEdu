@@ -12,17 +12,24 @@ namespace HD
   {
     public void Run()
     {
+      Console.WriteLine(Execute("add --all"));
+      Console.WriteLine(Execute("commit -a -m \"Test\""));
+      Console.WriteLine(Execute("push"));
+    }
+
+    private static string Execute(string command)
+    {
       ProcessStartInfo startInfo = new ProcessStartInfo
       {
         FileName = "git",
-        Arguments = "commit -a -m \"Test\"",
+        Arguments = command,
         RedirectStandardOutput = true,
         UseShellExecute = false
       };
 
       Process gitProcess = Process.Start(startInfo);
       string result = gitProcess.StandardOutput.ReadToEnd();
-      Console.WriteLine(result);
+      return result;
     }
   }
 }
