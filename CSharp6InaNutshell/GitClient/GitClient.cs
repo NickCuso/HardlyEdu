@@ -31,7 +31,7 @@ namespace HD
       string step1Result = Execute(gitCommand);
       Console.CursorLeft = 0;
 
-      Console.WriteLine(step1Result);
+      //Console.WriteLine(step1Result);
     }
 
     static string Execute(
