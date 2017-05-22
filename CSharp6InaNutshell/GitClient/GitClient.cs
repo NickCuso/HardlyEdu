@@ -57,7 +57,8 @@ namespace HD
 
       Process gitProcess = Process.Start(startInfo);
       Console.WriteLine(gitProcess.StandardOutput.ReadToEnd());
-      Thread.Sleep(TimeSpan.FromSeconds(1));
+
+      Thread.Sleep(TimeSpan.FromSeconds(3));
     }
   }
 }
