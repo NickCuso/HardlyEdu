@@ -25,17 +25,18 @@ namespace HD
     }
 
     static void ExecuteAndPrint(
-      string stepDescription, 
+      string stepDescription,
       string gitCommand)
     {
-      Console.Write(stepDescription.PadRight(20));
-      string step1Result = Execute(gitCommand);
+      Console.CursorTop = Console.WindowHeight - 1;
       Console.CursorLeft = 0;
-
-      //Console.WriteLine(step1Result);
+      Console.Write(stepDescription.PadRight(Console.WindowWidth));
+      Console.CursorTop = 0;
+      Console.CursorLeft = 0;
+      Execute(gitCommand);
     }
 
-    static string Execute(
+    static void Execute(
       string command)
     {
       ProcessStartInfo startInfo = new ProcessStartInfo
@@ -43,20 +44,10 @@ namespace HD
         FileName = "git",
         Arguments = command,
         RedirectStandardOutput = true,
-        UseShellExecute = false
+        UseShellExecute = false,
       };
 
-
-      using(TextWriter writer = new StringWriter())
-      {
-        TextWriter oldOut = Console.Out;
-        Console.SetOut(writer);
-        Console.SetError(writer);
-        Process gitProcess = Process.Start(startInfo);
-        Console.SetOut(oldOut);
-        Console.SetError(oldOut);
-        return writer.ToString();
-      }
+      Process gitProcess = Process.Start(startInfo);
     }
   }
 }
