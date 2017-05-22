@@ -54,6 +54,7 @@
     <Compile Include="AttributesExample.cs" />
     <Compile Include="DateTimeExamples.cs" />
     <Compile Include="DynamicBinding.cs" />
+    <Compile Include="EnvironmentAndAppContext.cs" />
     <Compile Include="FormattingExamples.cs" />
     <Compile Include="GitClient\GitClient.cs" />
     <Compile Include="HDFormatProvider.cs" />

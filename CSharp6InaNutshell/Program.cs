@@ -6,8 +6,12 @@ namespace HD
   {
     static void Main()
     {
-      //new WorkingWithNumbers().Run();
+      AppContext.SetSwitch("MyCustomSwitch", isEnabled: false);
+
+
       new GitClient().Run();
+      //new EnvironmentAndAppContext().Run();
+
       Console.ReadKey();
     }
   }
