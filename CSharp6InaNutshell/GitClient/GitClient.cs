@@ -14,8 +14,8 @@ namespace HD
   {
     public void Run()
     {
-      Console.WindowWidth = Console.LargestWindowWidth / 2;
-      Console.WindowHeight = Console.LargestWindowHeight / 2;
+      Console.WindowWidth = Console.LargestWindowWidth ;
+      Console.WindowHeight = Console.LargestWindowHeight ;
 
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.BackgroundColor = ConsoleColor.DarkGray;
