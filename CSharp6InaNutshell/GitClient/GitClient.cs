@@ -23,18 +23,25 @@ namespace HD
       ExecuteAndPrint("Step 1 of 3: Add untracked files", "add --all");
       ExecuteAndPrint("Step 2 of 3: Commit all", "commit -a -m \"Test\"");
       ExecuteAndPrint("Step 3 of 3: Push!", "push");
+
+      UpdateBottomStatus("All done \\o/");
     }
 
     static void ExecuteAndPrint(
       string stepDescription,
       string gitCommand)
     {
+      UpdateBottomStatus(stepDescription);
+      Execute(gitCommand);
+    }
+
+    static void UpdateBottomStatus(string stepDescription)
+    {
       Console.CursorTop = Console.WindowHeight - 1;
       Console.CursorLeft = 0;
       Console.Write(stepDescription.PadRight(Console.WindowWidth));
       Console.CursorTop = 0;
       Console.CursorLeft = 0;
-      Execute(gitCommand);
     }
 
     static void Execute(
